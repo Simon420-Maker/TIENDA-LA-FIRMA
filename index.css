@@ -1,0 +1,296 @@
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    color:#222;
+    min-width:320px;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+header{
+    width:100%;
+    background:#8B0000;
+    padding:15px 40px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.logo{
+    width:120px;
+    height:60px;
+    background:white;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#8B0000;
+    font-weight:bold;
+}
+
+.logo img{
+    max-width:80%;
+    max-height:80%;
+    object-fit:contain;
+}
+
+/* MENU */
+
+.menu{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    color:#FFD700;
+}
+
+/* BUSCADOR */
+
+.search-box{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    min-width:180px;
+}
+
+.search-box input{
+    padding:10px;
+    border:none;
+    border-radius:25px;
+    width:min(100%, 220px);
+}
+
+/* LOGIN */
+
+.login-btn{
+    background:#FFD700;
+    padding:10px 20px;
+    border-radius:25px;
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.login-btn:hover{
+    background:white;
+}
+
+/* ---------------- SLIDER ---------------- */
+
+.slider{
+    width:100%;
+    height:500px;
+    overflow:hidden;
+    margin-top:10px;
+}
+
+.slides{
+    display:flex;
+    width:500%;
+    animation:slide 25s infinite;
+}
+
+.slides a{
+    width:100%;
+}
+
+.slides img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+}
+
+@keyframes slide{
+    0%{margin-left:0;}
+    15%{margin-left:0;}
+
+    20%{margin-left:-100%;}
+    35%{margin-left:-100%;}
+
+    40%{margin-left:-200%;}
+    55%{margin-left:-200%;}
+
+    60%{margin-left:-300%;}
+    75%{margin-left:-300%;}
+
+    80%{margin-left:-400%;}
+    100%{margin-left:-400%;}
+}
+
+/* ---------------- INFORMACION ---------------- */
+
+.info-container{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:70px 10%;
+    flex-wrap:wrap;
+}
+
+.info-box{
+    background:white;
+    width:500px;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+}
+
+.info-box h2{
+    color:#8B0000;
+    margin-bottom:20px;
+}
+
+.info-box p{
+    line-height:1.7;
+}
+
+/* ---------------- PROGRAMADORES ---------------- */
+
+.team-section{
+    padding:70px 5%;
+    text-align:center;
+}
+
+.team-section h2{
+    font-size:40px;
+    color:#8B0000;
+    margin-bottom:50px;
+}
+
+.team-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.profile{
+    background:white;
+    width:220px;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.profile:hover{
+    transform:translateY(-10px);
+}
+
+.profile img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:20px;
+}
+
+.profile h3{
+    color:#8B0000;
+    margin-bottom:10px;
+}
+
+.profile p{
+    font-size:14px;
+}
+
+/* ---------------- FOOTER ---------------- */
+
+footer{
+    background:#8B0000;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+}
+
+@media (max-width: 900px){
+    header{
+        padding:15px 20px;
+    }
+
+    .navbar{
+        justify-content:center;
+    }
+
+    .menu{
+        width:100%;
+        justify-content:center;
+        order:3;
+    }
+
+    .search-box{
+        width:100%;
+        order:2;
+    }
+
+    .slider,
+    .slides img{
+        height:360px;
+    }
+}
+
+@media (max-width: 600px){
+    .menu{
+        flex-wrap:wrap;
+        gap:12px 20px;
+    }
+
+    .menu a{
+        font-size:16px;
+    }
+
+    .slider,
+    .slides img{
+        height:260px;
+    }
+
+    .info-container{
+        padding:40px 20px;
+    }
+
+    .info-box{
+        padding:24px 20px;
+    }
+
+    .team-section h2{
+        font-size:28px;
+        margin-bottom:30px;
+    }
+
+    .profile{
+        width:min(100%, 260px);
+    }
+}
+
+

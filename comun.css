@@ -1,0 +1,49 @@
+/* Estilos compartidos por todas las páginas (sesión, agotado, botones del carrito) */
+
+.user-box{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.user-name{
+    color:#fff;
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+.buy-btn.agotado,
+.buy-btn:disabled{
+    background:#999;
+    color:#fff;
+    cursor:not-allowed;
+}
+
+.buy-btn.agotado:hover,
+.buy-btn:disabled:hover{
+    background:#999;
+}
+
+.cart-actions{
+    display:flex;
+    gap:10px;
+}
+
+.cart-actions .clear-btn,
+.cart-actions .checkout-btn{
+    flex:1;
+    width:auto;
+    border:0;
+    border-radius:8px;
+    padding:12px 14px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.cart-actions .clear-btn{ background:#eaeaea; color:#333; }
+.cart-actions .checkout-btn{ background:#8B0000; color:#fff; }
+.cart-actions .checkout-btn:disabled{ background:#999; cursor:wait; }
+
+@media(max-width:600px){
+    .user-name{ display:none; }
+}
